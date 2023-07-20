@@ -1,0 +1,95 @@
+@font-face {
+    font-family: MyCustomFont;
+    src: url(../fonts/CustomFont.ttf);
+}
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: MyCustomFont;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F6D55C;
+    background-image: linear-gradient(135deg, #F6D55C 0%, #ED553B 100%);
+}
+
+.score-container {
+    display: grid;
+    width: 90%;
+    max-width: 800px;
+    height: 80%;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+#header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#returnHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#returnButton {
+    font-family: MyCustomFont;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #555;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#returnButton:hover {
+    background-color: #333;
+}
+
+#score-storage {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#score-text {
+    display: grid;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+.hide {
+    display: none;
+}
